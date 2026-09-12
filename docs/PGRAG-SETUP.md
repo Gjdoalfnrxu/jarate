@@ -37,7 +37,7 @@ marzuki-neon). Two gotchas at the end — read them first.
   | var | default |
   |---|---|
   | `RAG_DSN` | `host=127.0.0.1 dbname=rag user=monky` |
-  | `RAG_EMBED_URL` | `http://10.9.8.7:11434/v1/embeddings` |
+  | `RAG_EMBED_URL` | `http://localhost:11434/v1/embeddings` |
   | `RAG_EMBED_MODEL` | `nomic-embed-text` |
   | `RAG_PROJECT` | *(unset = search all projects)* |
 
