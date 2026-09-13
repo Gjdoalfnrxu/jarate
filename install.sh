@@ -11,6 +11,13 @@
 #        ~/scripts/pi-wait   -> <jarate>/dispatch/pi-wait
 #        ~/scripts/pi-bg-tail -> <jarate>/dispatch/pi-bg-tail
 #        ~/scripts/pi-bg-kill -> <jarate>/dispatch/pi-bg-kill
+#        ~/scripts/pi-bg-watchdog -> <jarate>/dispatch/pi-bg-watchdog
+#                               (H2 2026-09-13: the live watchdog was a stale
+#                               real file that install.sh never linked, so
+#                               artifact fixes in the checkout never reached
+#                               the running sweep and dead-ping floods
+#                               followed. link_into's 'leaving it (handle
+#                               manually)' message is the tell)
 #        ~/scripts/jarate    -> <jarate>/bin/jarate
 #        ~/bin/agent-say     -> <jarate>/bin/agent-say
 #        ~/bin/jarate-diff   -> <jarate>/bin/jarate-diff
@@ -111,6 +118,7 @@ link_into "$HOME/scripts/pi-bg"      "$JARATE_DIR/dispatch/pi-bg"
 link_into "$HOME/scripts/pi-wait"    "$JARATE_DIR/dispatch/pi-wait"
 link_into "$HOME/scripts/pi-bg-tail" "$JARATE_DIR/dispatch/pi-bg-tail"
 link_into "$HOME/scripts/pi-bg-kill" "$JARATE_DIR/dispatch/pi-bg-kill"
+link_into "$HOME/scripts/pi-bg-watchdog" "$JARATE_DIR/dispatch/pi-bg-watchdog"
 link_into "$HOME/scripts/jarate"     "$JARATE_DIR/bin/jarate"
 link_into "$HOME/bin/agent-say"      "$JARATE_DIR/bin/agent-say"
 link_into "$HOME/bin/jarate-diff"    "$JARATE_DIR/bin/jarate-diff"
